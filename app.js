@@ -162,15 +162,16 @@ class App {
 
 
         //Render workout on map as marker
-        this.renderWorkoutMarker(workout)
+        this._renderWorkoutMarker(workout)
 
         //Render workout on list
+
 
         //Hide form + Clear input fields
         inputDistance.value = inputDuration.value = inputCadence.value  = inputElevation.value = ''
     }
 
-    renderWorkoutMarker(workout){
+    _renderWorkoutMarker(workout){
         L.marker(workout.coords)
         .addTo(this.#map)
         .bindPopup(L.popup({
